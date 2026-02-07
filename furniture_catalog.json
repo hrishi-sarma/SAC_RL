@@ -1,0 +1,486 @@
+{
+  "catalog_info": {
+    "catalog_id": "furniture_catalog_v1",
+    "total_items": 20,
+    "categories": ["seating", "tables", "storage", "decor", "lighting"]
+  },
+  "furniture_items": [
+    {
+      "id": "coffee_table_001",
+      "name": "Modern Glass Coffee Table",
+      "type": "coffee_table",
+      "category": "tables",
+      "dimensions": {
+        "length": 1.2,
+        "width": 0.6,
+        "height": 0.45
+      },
+      "color": "glass_wood",
+      "material": "glass_wood",
+      "style": "modern",
+      "price": 350,
+      "price_tier": "mid",
+      "weight": 25,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "surface_type": "hard",
+        "storage": false
+      },
+      "aesthetic_score": 8.5,
+      "popularity": 0.85
+    },
+    {
+      "id": "armchair_001",
+      "name": "Contemporary Accent Chair",
+      "type": "armchair",
+      "category": "seating",
+      "dimensions": {
+        "length": 0.85,
+        "width": 0.8,
+        "height": 0.9
+      },
+      "color": "beige",
+      "material": "fabric",
+      "style": "modern",
+      "price": 550,
+      "price_tier": "mid",
+      "weight": 18,
+      "functional_properties": {
+        "pairs_with": ["sofa", "coffee_table", "side_table"],
+        "seating_capacity": 1,
+        "comfort_level": "high"
+      },
+      "aesthetic_score": 8.0,
+      "popularity": 0.75
+    },
+    {
+      "id": "side_table_001",
+      "name": "Minimalist Side Table",
+      "type": "side_table",
+      "category": "tables",
+      "dimensions": {
+        "length": 0.45,
+        "width": 0.45,
+        "height": 0.55
+      },
+      "color": "white",
+      "material": "wood",
+      "style": "modern",
+      "price": 180,
+      "price_tier": "low",
+      "weight": 8,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "surface_type": "hard",
+        "storage": true
+      },
+      "aesthetic_score": 7.5,
+      "popularity": 0.80
+    },
+    {
+      "id": "bookshelf_001",
+      "name": "Open Bookshelf",
+      "type": "bookshelf",
+      "category": "storage",
+      "dimensions": {
+        "length": 0.8,
+        "width": 0.35,
+        "height": 1.8
+      },
+      "color": "wood_tone",
+      "material": "wood",
+      "style": "modern",
+      "price": 420,
+      "price_tier": "mid",
+      "weight": 35,
+      "functional_properties": {
+        "storage": true,
+        "display": true,
+        "capacity": "high"
+      },
+      "aesthetic_score": 7.8,
+      "popularity": 0.70
+    },
+    {
+      "id": "floor_lamp_001",
+      "name": "Arc Floor Lamp",
+      "type": "floor_lamp",
+      "category": "lighting",
+      "dimensions": {
+        "length": 0.4,
+        "width": 0.4,
+        "height": 1.8
+      },
+      "color": "black_brass",
+      "material": "metal",
+      "style": "modern",
+      "price": 280,
+      "price_tier": "mid",
+      "weight": 12,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "light_type": "ambient",
+        "adjustable": true
+      },
+      "aesthetic_score": 8.2,
+      "popularity": 0.78
+    },
+    {
+      "id": "plant_stand_001",
+      "name": "Metal Plant Stand",
+      "type": "plant_stand",
+      "category": "decor",
+      "dimensions": {
+        "length": 0.3,
+        "width": 0.3,
+        "height": 0.7
+      },
+      "color": "black",
+      "material": "metal",
+      "style": "modern",
+      "price": 95,
+      "price_tier": "low",
+      "weight": 5,
+      "functional_properties": {
+        "display": true,
+        "outdoor_compatible": false
+      },
+      "aesthetic_score": 7.0,
+      "popularity": 0.65
+    },
+    {
+      "id": "ottoman_001",
+      "name": "Storage Ottoman",
+      "type": "ottoman",
+      "category": "seating",
+      "dimensions": {
+        "length": 0.9,
+        "width": 0.6,
+        "height": 0.45
+      },
+      "color": "gray",
+      "material": "fabric",
+      "style": "modern",
+      "price": 320,
+      "price_tier": "mid",
+      "weight": 15,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "seating_capacity": 1,
+        "storage": true
+      },
+      "aesthetic_score": 7.5,
+      "popularity": 0.72
+    },
+    {
+      "id": "console_table_001",
+      "name": "Narrow Console Table",
+      "type": "console_table",
+      "category": "tables",
+      "dimensions": {
+        "length": 1.2,
+        "width": 0.35,
+        "height": 0.8
+      },
+      "color": "wood_tone",
+      "material": "wood",
+      "style": "modern",
+      "price": 380,
+      "price_tier": "mid",
+      "weight": 22,
+      "functional_properties": {
+        "wall_mounted": false,
+        "storage": true,
+        "display": true
+      },
+      "aesthetic_score": 7.8,
+      "popularity": 0.68
+    },
+    {
+      "id": "rug_001",
+      "name": "Modern Area Rug",
+      "type": "rug",
+      "category": "decor",
+      "dimensions": {
+        "length": 2.4,
+        "width": 1.8,
+        "height": 0.02
+      },
+      "color": "gray_white",
+      "material": "textile",
+      "style": "modern",
+      "price": 450,
+      "price_tier": "mid",
+      "weight": 8,
+      "functional_properties": {
+        "pairs_with": ["sofa", "coffee_table"],
+        "defines_zone": true
+      },
+      "aesthetic_score": 8.0,
+      "popularity": 0.82
+    },
+    {
+      "id": "wall_shelf_001",
+      "name": "Floating Wall Shelf",
+      "type": "wall_shelf",
+      "category": "storage",
+      "dimensions": {
+        "length": 1.0,
+        "width": 0.25,
+        "height": 0.05
+      },
+      "color": "white",
+      "material": "wood",
+      "style": "modern",
+      "price": 85,
+      "price_tier": "low",
+      "weight": 4,
+      "functional_properties": {
+        "wall_mounted": true,
+        "storage": true,
+        "display": true
+      },
+      "aesthetic_score": 7.2,
+      "popularity": 0.75
+    },
+    {
+      "id": "pouf_001",
+      "name": "Knitted Pouf",
+      "type": "pouf",
+      "category": "seating",
+      "dimensions": {
+        "length": 0.5,
+        "width": 0.5,
+        "height": 0.4
+      },
+      "color": "cream",
+      "material": "textile",
+      "style": "modern",
+      "price": 120,
+      "price_tier": "low",
+      "weight": 3,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "seating_capacity": 1,
+        "portable": true
+      },
+      "aesthetic_score": 7.0,
+      "popularity": 0.60
+    },
+    {
+      "id": "media_cabinet_001",
+      "name": "Sideboard Media Cabinet",
+      "type": "media_cabinet",
+      "category": "storage",
+      "dimensions": {
+        "length": 1.6,
+        "width": 0.45,
+        "height": 0.7
+      },
+      "color": "wood_tone",
+      "material": "wood",
+      "style": "modern",
+      "price": 680,
+      "price_tier": "high",
+      "weight": 45,
+      "functional_properties": {
+        "pairs_with": ["tv_unit"],
+        "storage": true,
+        "cable_management": true
+      },
+      "aesthetic_score": 8.5,
+      "popularity": 0.65
+    },
+    {
+      "id": "nesting_tables_001",
+      "name": "Nesting Tables Set",
+      "type": "nesting_tables",
+      "category": "tables",
+      "dimensions": {
+        "length": 0.6,
+        "width": 0.4,
+        "height": 0.5
+      },
+      "color": "gold_glass",
+      "material": "metal_glass",
+      "style": "modern",
+      "price": 240,
+      "price_tier": "mid",
+      "weight": 12,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "stackable": true,
+        "quantity": 3
+      },
+      "aesthetic_score": 7.8,
+      "popularity": 0.68
+    },
+    {
+      "id": "bench_001",
+      "name": "Upholstered Bench",
+      "type": "bench",
+      "category": "seating",
+      "dimensions": {
+        "length": 1.2,
+        "width": 0.4,
+        "height": 0.45
+      },
+      "color": "beige",
+      "material": "fabric_wood",
+      "style": "modern",
+      "price": 390,
+      "price_tier": "mid",
+      "weight": 20,
+      "functional_properties": {
+        "seating_capacity": 2,
+        "pairs_with": ["console_table", "wall"],
+        "storage": false
+      },
+      "aesthetic_score": 7.5,
+      "popularity": 0.58
+    },
+    {
+      "id": "decorative_ladder_001",
+      "name": "Decorative Ladder",
+      "type": "decorative_ladder",
+      "category": "decor",
+      "dimensions": {
+        "length": 0.5,
+        "width": 0.15,
+        "height": 1.7
+      },
+      "color": "wood_tone",
+      "material": "wood",
+      "style": "modern",
+      "price": 110,
+      "price_tier": "low",
+      "weight": 6,
+      "functional_properties": {
+        "display": true,
+        "storage": false,
+        "leans_on_wall": true
+      },
+      "aesthetic_score": 7.0,
+      "popularity": 0.55
+    },
+    {
+      "id": "bar_cart_001",
+      "name": "Gold Bar Cart",
+      "type": "bar_cart",
+      "category": "storage",
+      "dimensions": {
+        "length": 0.75,
+        "width": 0.45,
+        "height": 0.85
+      },
+      "color": "gold",
+      "material": "metal_glass",
+      "style": "modern",
+      "price": 295,
+      "price_tier": "mid",
+      "weight": 15,
+      "functional_properties": {
+        "storage": true,
+        "portable": true,
+        "wheels": true
+      },
+      "aesthetic_score": 7.8,
+      "popularity": 0.62
+    },
+    {
+      "id": "mirror_001",
+      "name": "Round Wall Mirror",
+      "type": "mirror",
+      "category": "decor",
+      "dimensions": {
+        "length": 0.8,
+        "width": 0.05,
+        "height": 0.8
+      },
+      "color": "gold_frame",
+      "material": "glass_metal",
+      "style": "modern",
+      "price": 185,
+      "price_tier": "low",
+      "weight": 8,
+      "functional_properties": {
+        "wall_mounted": true,
+        "reflects_light": true
+      },
+      "aesthetic_score": 8.0,
+      "popularity": 0.77
+    },
+    {
+      "id": "magazine_rack_001",
+      "name": "Metal Magazine Rack",
+      "type": "magazine_rack",
+      "category": "storage",
+      "dimensions": {
+        "length": 0.4,
+        "width": 0.25,
+        "height": 0.45
+      },
+      "color": "black",
+      "material": "metal",
+      "style": "modern",
+      "price": 75,
+      "price_tier": "low",
+      "weight": 3,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "storage": true,
+        "portable": true
+      },
+      "aesthetic_score": 6.5,
+      "popularity": 0.52
+    },
+    {
+      "id": "table_lamp_001",
+      "name": "Modern Table Lamp",
+      "type": "table_lamp",
+      "category": "lighting",
+      "dimensions": {
+        "length": 0.25,
+        "width": 0.25,
+        "height": 0.5
+      },
+      "color": "white_brass",
+      "material": "ceramic_metal",
+      "style": "modern",
+      "price": 145,
+      "price_tier": "low",
+      "weight": 4,
+      "functional_properties": {
+        "pairs_with": ["side_table", "console_table"],
+        "light_type": "task",
+        "adjustable": false
+      },
+      "aesthetic_score": 7.5,
+      "popularity": 0.73
+    },
+    {
+      "id": "storage_basket_001",
+      "name": "Woven Storage Basket",
+      "type": "storage_basket",
+      "category": "storage",
+      "dimensions": {
+        "length": 0.4,
+        "width": 0.3,
+        "height": 0.35
+      },
+      "color": "natural",
+      "material": "woven",
+      "style": "modern",
+      "price": 55,
+      "price_tier": "low",
+      "weight": 2,
+      "functional_properties": {
+        "storage": true,
+        "portable": true,
+        "stackable": true
+      },
+      "aesthetic_score": 6.8,
+      "popularity": 0.68
+    }
+  ]
+}

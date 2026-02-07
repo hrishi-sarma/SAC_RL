@@ -1,0 +1,158 @@
+{
+  "room_info": {
+    "room_id": "living_room_001",
+    "dimensions": {
+      "length": 6.0,
+      "width": 5.0,
+      "height": 2.8
+    },
+    "room_type": "living_room",
+    "style_preference": "modern_minimalist",
+    "color_scheme": ["white", "gray", "wood_tone"]
+  },
+  "existing_furniture": [
+    {
+      "id": "sofa_001",
+      "type": "sofa",
+      "category": "seating",
+      "position": {
+        "x": 3.0,
+        "y": 4.5,
+        "z": 0.0
+      },
+      "dimensions": {
+        "length": 2.2,
+        "width": 0.9,
+        "height": 0.85
+      },
+      "rotation": 0,
+      "color": "gray",
+      "material": "fabric",
+      "style": "modern",
+      "price_tier": "mid",
+      "functional_zone": "seating_area"
+    },
+    {
+      "id": "tv_unit_001",
+      "type": "tv_unit",
+      "category": "storage",
+      "position": {
+        "x": 3.0,
+        "y": 0.3,
+        "z": 0.0
+      },
+      "dimensions": {
+        "length": 1.8,
+        "width": 0.45,
+        "height": 0.5
+      },
+      "rotation": 0,
+      "color": "wood_tone",
+      "material": "wood",
+      "style": "modern",
+      "price_tier": "mid",
+      "functional_zone": "entertainment"
+    }
+  ],
+  "doors": [
+    {
+      "id": "door_001",
+      "position": {
+        "x": 0.0,
+        "y": 2.5,
+        "z": 0.0
+      },
+      "dimensions": {
+        "width": 0.9,
+        "height": 2.1
+      },
+      "swing_direction": "inward",
+      "clearance_radius": 1.2
+    }
+  ],
+  "windows": [
+    {
+      "id": "window_001",
+      "position": {
+        "x": 1.5,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "dimensions": {
+        "width": 1.5,
+        "height": 1.2
+      }
+    },
+    {
+      "id": "window_002",
+      "position": {
+        "x": 6.0,
+        "y": 2.0,
+        "z": 1.0
+      },
+      "dimensions": {
+        "width": 1.5,
+        "height": 1.2
+      }
+    }
+  ],
+  "walls": [
+    {
+      "id": "north_wall",
+      "start": {"x": 0.0, "y": 5.0},
+      "end": {"x": 6.0, "y": 5.0}
+    },
+    {
+      "id": "south_wall",
+      "start": {"x": 0.0, "y": 0.0},
+      "end": {"x": 6.0, "y": 0.0}
+    },
+    {
+      "id": "east_wall",
+      "start": {"x": 6.0, "y": 0.0},
+      "end": {"x": 6.0, "y": 5.0}
+    },
+    {
+      "id": "west_wall",
+      "start": {"x": 0.0, "y": 0.0},
+      "end": {"x": 0.0, "y": 5.0}
+    }
+  ],
+  "available_space": {
+    "free_area_percentage": 65.5,
+    "max_additional_items": 4,
+    "priority_zones": [
+      {
+        "zone_name": "coffee_table_zone",
+        "center": {"x": 3.0, "y": 3.2},
+        "radius": 1.0,
+        "priority": "high"
+      },
+      {
+        "zone_name": "accent_chair_zone",
+        "center": {"x": 5.0, "y": 4.0},
+        "radius": 0.8,
+        "priority": "medium"
+      },
+      {
+        "zone_name": "side_table_zone",
+        "center": {"x": 1.2, "y": 4.5},
+        "radius": 0.5,
+        "priority": "medium"
+      },
+      {
+        "zone_name": "plant_zone",
+        "center": {"x": 5.5, "y": 1.5},
+        "radius": 0.4,
+        "priority": "low"
+      }
+    ]
+  },
+  "constraints": {
+    "min_clearance": 0.6,
+    "min_pathway_width": 0.9,
+    "max_furniture_count": 8,
+    "budget_max": 5000,
+    "budget_remaining": 2000
+  }
+}
