@@ -1,0 +1,872 @@
+{
+  "catalog_info": {
+    "catalog_id": "furniture_catalog_v3_advanced",
+    "total_items": 20,
+    "categories": ["seating", "tables", "storage", "decor", "lighting"],
+    "version": "3.0",
+    "placement_system": "advanced_multi_constraint"
+  },
+  "furniture_items": [
+    {
+      "id": "coffee_table_001",
+      "name": "Modern Glass Coffee Table",
+      "type": "coffee_table",
+      "category": "tables",
+      "dimensions": {"length": 1.2, "width": 0.6, "height": 0.45},
+      "color": "glass_wood",
+      "material": "glass_wood",
+      "style": "modern",
+      "price": 350,
+      "price_tier": "mid",
+      "weight": 25,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "surface_type": "hard",
+        "storage": false
+      },
+      "aesthetic_score": 8.5,
+      "popularity": 0.85,
+      "advanced_placement": {
+        "primary_tag": "seating_companion",
+        "secondary_tags": ["needs_clearance", "focal_point_support", "conversation_zone"],
+        "spatial_constraints": {
+          "must_face_primary_seating": true,
+          "ideal_distance_from_sofa": {"min": 0.4, "ideal": 0.6, "max": 1.0},
+          "requires_frontal_access": true,
+          "min_clearance_all_sides": 0.6,
+          "preferred_orientation": "parallel_to_sofa"
+        },
+        "functional_requirements": {
+          "needs_walking_path": true,
+          "blocks_traffic_flow": false,
+          "supports_other_items": ["table_lamp", "decor"],
+          "visibility_requirement": "medium"
+        },
+        "zone_preference": {
+          "primary_zone": "seating_area",
+          "distance_from_wall": {"min": 0.8, "ideal": 2.0, "max": 999},
+          "corner_compatible": false,
+          "center_room_score": 0.7
+        }
+      }
+    },
+    {
+      "id": "armchair_001",
+      "name": "Contemporary Accent Chair",
+      "type": "armchair",
+      "category": "seating",
+      "dimensions": {"length": 0.85, "width": 0.8, "height": 0.9},
+      "color": "beige",
+      "material": "fabric",
+      "style": "modern",
+      "price": 550,
+      "price_tier": "mid",
+      "weight": 18,
+      "functional_properties": {
+        "pairs_with": ["sofa", "coffee_table", "side_table"],
+        "seating_capacity": 1,
+        "comfort_level": "high"
+      },
+      "aesthetic_score": 8.0,
+      "popularity": 0.75,
+      "advanced_placement": {
+        "primary_tag": "primary_seating",
+        "secondary_tags": ["conversation_zone", "needs_clearance", "focal_point"],
+        "spatial_constraints": {
+          "faces_main_seating": true,
+          "ideal_angle_to_sofa": {"min": 45, "ideal": 60, "max": 90},
+          "ideal_distance_from_sofa": {"min": 1.5, "ideal": 2.2, "max": 3.0},
+          "requires_frontal_access": true,
+          "min_clearance_front": 0.9,
+          "min_clearance_sides": 0.4,
+          "can_be_angled": true
+        },
+        "functional_requirements": {
+          "needs_side_table_nearby": true,
+          "ideal_lamp_distance": 2.0,
+          "viewing_angle_to_tv": {"min": 15, "max": 45},
+          "conversation_circle_member": true
+        },
+        "zone_preference": {
+          "primary_zone": "seating_area",
+          "distance_from_wall": {"min": 0.3, "ideal": 0.5, "max": 1.5},
+          "corner_compatible": true,
+          "corner_angle_preferred": true
+        }
+      }
+    },
+    {
+      "id": "side_table_001",
+      "name": "Minimalist Side Table",
+      "type": "side_table",
+      "category": "tables",
+      "dimensions": {"length": 0.45, "width": 0.45, "height": 0.55},
+      "color": "white",
+      "material": "wood",
+      "style": "modern",
+      "price": 180,
+      "price_tier": "low",
+      "weight": 8,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "surface_type": "hard",
+        "storage": true
+      },
+      "aesthetic_score": 7.5,
+      "popularity": 0.80,
+      "advanced_placement": {
+        "primary_tag": "seating_accessory",
+        "secondary_tags": ["functional_support", "lamp_base_candidate"],
+        "spatial_constraints": {
+          "must_be_beside_seating": true,
+          "ideal_distance_from_seating": {"min": 0.1, "ideal": 0.3, "max": 0.6},
+          "preferred_side": "arm_side",
+          "requires_lateral_access": false,
+          "min_clearance_access_side": 0.5
+        },
+        "functional_requirements": {
+          "supports_items": ["table_lamp", "decor"],
+          "reachable_from_seat": true,
+          "max_reach_distance": 0.8,
+          "stable_surface_required": true
+        },
+        "zone_preference": {
+          "primary_zone": "seating_area",
+          "distance_from_wall": {"min": 0.0, "ideal": 0.2, "max": 1.0},
+          "corner_compatible": false,
+          "flanking_position": true
+        }
+      }
+    },
+    {
+      "id": "bookshelf_001",
+      "name": "Open Bookshelf",
+      "type": "bookshelf",
+      "category": "storage",
+      "dimensions": {"length": 0.8, "width": 0.35, "height": 1.8},
+      "color": "wood_tone",
+      "material": "wood",
+      "style": "modern",
+      "price": 420,
+      "price_tier": "mid",
+      "weight": 35,
+      "functional_properties": {
+        "storage": true,
+        "display": true,
+        "capacity": "high"
+      },
+      "aesthetic_score": 7.8,
+      "popularity": 0.70,
+      "advanced_placement": {
+        "primary_tag": "wall_unit",
+        "secondary_tags": ["storage", "display", "vertical_element"],
+        "spatial_constraints": {
+          "must_touch_wall": true,
+          "ideal_distance_from_wall": {"min": 0.0, "ideal": 0.0, "max": 0.15},
+          "requires_wall_behind": true,
+          "perpendicular_to_wall": true,
+          "min_clearance_front": 0.8,
+          "tipping_hazard_if_not_wall": true
+        },
+        "functional_requirements": {
+          "needs_browsing_space": true,
+          "visual_weight": "high",
+          "should_not_block_windows": true,
+          "avoid_high_traffic": true
+        },
+        "zone_preference": {
+          "primary_zone": "peripheral",
+          "distance_from_wall": {"min": 0.0, "ideal": 0.0, "max": 0.1},
+          "corner_compatible": true,
+          "wall_segment_preferred": "solid_wall"
+        }
+      }
+    },
+    {
+      "id": "floor_lamp_001",
+      "name": "Arc Floor Lamp",
+      "type": "floor_lamp",
+      "category": "lighting",
+      "dimensions": {"length": 0.4, "width": 0.4, "height": 1.8},
+      "color": "black_brass",
+      "material": "metal",
+      "style": "modern",
+      "price": 280,
+      "price_tier": "mid",
+      "weight": 12,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "light_type": "ambient",
+        "adjustable": true
+      },
+      "aesthetic_score": 8.2,
+      "popularity": 0.78,
+      "advanced_placement": {
+        "primary_tag": "task_lighting",
+        "secondary_tags": ["seating_accessory", "corner_friendly", "arc_coverage"],
+        "spatial_constraints": {
+          "beside_or_behind_seating": true,
+          "ideal_distance_from_seating": {"min": 0.3, "ideal": 0.8, "max": 1.5},
+          "arc_reach_over_seating": true,
+          "base_footprint_small": true,
+          "min_clearance": 0.3
+        },
+        "functional_requirements": {
+          "illuminates_seating_area": true,
+          "light_coverage_radius": 2.5,
+          "should_not_block_walkway": true,
+          "outlet_proximity_needed": true,
+          "max_outlet_distance": 2.0
+        },
+        "zone_preference": {
+          "primary_zone": "seating_area",
+          "distance_from_wall": {"min": 0.2, "ideal": 0.5, "max": 1.0},
+          "corner_compatible": true,
+          "behind_seating_bonus": 0.3
+        }
+      }
+    },
+    {
+      "id": "plant_stand_001",
+      "name": "Metal Plant Stand",
+      "type": "plant_stand",
+      "category": "decor",
+      "dimensions": {"length": 0.3, "width": 0.3, "height": 0.7},
+      "color": "black",
+      "material": "metal",
+      "style": "modern",
+      "price": 95,
+      "price_tier": "low",
+      "weight": 5,
+      "functional_properties": {
+        "display": true,
+        "outdoor_compatible": false
+      },
+      "aesthetic_score": 7.0,
+      "popularity": 0.65,
+      "advanced_placement": {
+        "primary_tag": "corner_decor",
+        "secondary_tags": ["vertical_accent", "fills_void", "low_traffic"],
+        "spatial_constraints": {
+          "strongly_prefers_corner": true,
+          "ideal_corner_distance": {"min": 0.2, "ideal": 0.4, "max": 0.7},
+          "requires_minimal_clearance": true,
+          "can_be_tight_space": true,
+          "min_clearance": 0.25
+        },
+        "functional_requirements": {
+          "needs_natural_light": true,
+          "near_window_bonus": 0.4,
+          "max_window_distance": 3.0,
+          "fills_empty_corner": true,
+          "visual_weight": "low"
+        },
+        "zone_preference": {
+          "primary_zone": "corner",
+          "distance_from_wall": {"min": 0.2, "ideal": 0.3, "max": 0.6},
+          "corner_compatible": true,
+          "corner_required": true
+        }
+      }
+    },
+    {
+      "id": "ottoman_001",
+      "name": "Storage Ottoman",
+      "type": "ottoman",
+      "category": "seating",
+      "dimensions": {"length": 0.9, "width": 0.6, "height": 0.45},
+      "color": "gray",
+      "material": "fabric",
+      "style": "modern",
+      "price": 320,
+      "price_tier": "mid",
+      "weight": 15,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "seating_capacity": 1,
+        "storage": true
+      },
+      "aesthetic_score": 7.5,
+      "popularity": 0.72,
+      "advanced_placement": {
+        "primary_tag": "flexible_seating",
+        "secondary_tags": ["footrest", "coffee_table_alternative", "storage"],
+        "spatial_constraints": {
+          "in_front_of_sofa": true,
+          "ideal_distance_from_sofa": {"min": 0.4, "ideal": 0.8, "max": 1.3},
+          "aligned_with_sofa": true,
+          "can_replace_coffee_table": true,
+          "min_clearance_sides": 0.6
+        },
+        "functional_requirements": {
+          "multi_purpose": true,
+          "accessible_from_sofa": true,
+          "storage_accessible": true,
+          "can_be_moved": true
+        },
+        "zone_preference": {
+          "primary_zone": "seating_area",
+          "distance_from_wall": {"min": 0.8, "ideal": 1.5, "max": 999},
+          "corner_compatible": false,
+          "center_bias": 0.6
+        }
+      }
+    },
+    {
+      "id": "console_table_001",
+      "name": "Narrow Console Table",
+      "type": "console_table",
+      "category": "tables",
+      "dimensions": {"length": 1.2, "width": 0.35, "height": 0.8},
+      "color": "wood_tone",
+      "material": "wood",
+      "style": "modern",
+      "price": 380,
+      "price_tier": "mid",
+      "weight": 22,
+      "functional_properties": {
+        "wall_mounted": false,
+        "storage": true,
+        "display": true
+      },
+      "aesthetic_score": 7.8,
+      "popularity": 0.68,
+      "advanced_placement": {
+        "primary_tag": "wall_hugger",
+        "secondary_tags": ["entryway", "display_surface", "shallow_depth"],
+        "spatial_constraints": {
+          "must_be_against_wall": true,
+          "ideal_distance_from_wall": {"min": 0.0, "ideal": 0.05, "max": 0.2},
+          "perpendicular_to_wall": true,
+          "centered_on_wall_segment": true,
+          "min_clearance_front": 0.9
+        },
+        "functional_requirements": {
+          "display_surface": true,
+          "should_not_block_doors": true,
+          "ideal_behind_sofa": true,
+          "can_define_zones": true
+        },
+        "zone_preference": {
+          "primary_zone": "peripheral",
+          "distance_from_wall": {"min": 0.0, "ideal": 0.05, "max": 0.15},
+          "corner_compatible": false,
+          "long_wall_preferred": true
+        }
+      }
+    },
+    {
+      "id": "rug_001",
+      "name": "Modern Area Rug",
+      "type": "rug",
+      "category": "decor",
+      "dimensions": {"length": 2.4, "width": 1.8, "height": 0.02},
+      "color": "gray_white",
+      "material": "textile",
+      "style": "modern",
+      "price": 450,
+      "price_tier": "mid",
+      "weight": 8,
+      "functional_properties": {
+        "pairs_with": ["sofa", "coffee_table"],
+        "defines_zone": true
+      },
+      "aesthetic_score": 8.0,
+      "popularity": 0.82,
+      "advanced_placement": {
+        "primary_tag": "zone_definer",
+        "secondary_tags": ["foundation_layer", "under_furniture", "anchors_seating"],
+        "spatial_constraints": {
+          "under_coffee_table": true,
+          "under_front_legs_sofa": true,
+          "centered_on_seating_group": true,
+          "min_clearance": 0.0,
+          "extends_beyond_furniture": 0.3
+        },
+        "functional_requirements": {
+          "defines_conversation_area": true,
+          "unifies_furniture_group": true,
+          "should_not_block_doors": true,
+          "flat_on_floor": true
+        },
+        "zone_preference": {
+          "primary_zone": "seating_area",
+          "distance_from_wall": {"min": 0.6, "ideal": 1.2, "max": 999},
+          "corner_compatible": false,
+          "center_room_score": 0.9
+        }
+      }
+    },
+    {
+      "id": "wall_shelf_001",
+      "name": "Floating Wall Shelf",
+      "type": "wall_shelf",
+      "category": "storage",
+      "dimensions": {"length": 1.0, "width": 0.25, "height": 0.05},
+      "color": "white",
+      "material": "wood",
+      "style": "modern",
+      "price": 85,
+      "price_tier": "low",
+      "weight": 4,
+      "functional_properties": {
+        "wall_mounted": true,
+        "storage": true,
+        "display": true
+      },
+      "aesthetic_score": 7.2,
+      "popularity": 0.75,
+      "advanced_placement": {
+        "primary_tag": "wall_mounted",
+        "secondary_tags": ["display", "vertical_storage", "minimal_footprint"],
+        "spatial_constraints": {
+          "must_be_on_wall": true,
+          "ideal_distance_from_wall": {"min": 0.0, "ideal": 0.0, "max": 0.05},
+          "height_above_floor": 1.5,
+          "min_clearance_below": 0.8,
+          "avoid_above_seating": false
+        },
+        "functional_requirements": {
+          "requires_wall_support": true,
+          "display_purpose": true,
+          "should_not_block_art": true,
+          "groupable": true
+        },
+        "zone_preference": {
+          "primary_zone": "peripheral",
+          "distance_from_wall": {"min": 0.0, "ideal": 0.0, "max": 0.05},
+          "corner_compatible": false,
+          "empty_wall_preferred": true
+        }
+      }
+    },
+    {
+      "id": "pouf_001",
+      "name": "Knitted Pouf",
+      "type": "pouf",
+      "category": "seating",
+      "dimensions": {"length": 0.5, "width": 0.5, "height": 0.4},
+      "color": "cream",
+      "material": "textile",
+      "style": "modern",
+      "price": 120,
+      "price_tier": "low",
+      "weight": 3,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "seating_capacity": 1,
+        "portable": true
+      },
+      "aesthetic_score": 7.0,
+      "popularity": 0.60,
+      "advanced_placement": {
+        "primary_tag": "flexible_accent",
+        "secondary_tags": ["footrest", "extra_seating", "movable"],
+        "spatial_constraints": {
+          "near_primary_seating": true,
+          "ideal_distance_from_seating": {"min": 0.5, "ideal": 1.0, "max": 2.0},
+          "can_be_clustered": true,
+          "minimal_clearance_ok": true,
+          "min_clearance": 0.4
+        },
+        "functional_requirements": {
+          "multi_purpose": true,
+          "easily_movable": true,
+          "fills_gaps": true,
+          "casual_placement": true
+        },
+        "zone_preference": {
+          "primary_zone": "seating_area",
+          "distance_from_wall": {"min": 0.3, "ideal": 1.2, "max": 999},
+          "corner_compatible": false,
+          "flexible_position": true
+        }
+      }
+    },
+    {
+      "id": "media_cabinet_001",
+      "name": "Sideboard Media Cabinet",
+      "type": "media_cabinet",
+      "category": "storage",
+      "dimensions": {"length": 1.6, "width": 0.45, "height": 0.7},
+      "color": "wood_tone",
+      "material": "wood",
+      "style": "modern",
+      "price": 680,
+      "price_tier": "high",
+      "weight": 45,
+      "functional_properties": {
+        "pairs_with": ["tv_unit"],
+        "storage": true,
+        "cable_management": true
+      },
+      "aesthetic_score": 8.5,
+      "popularity": 0.65,
+      "advanced_placement": {
+        "primary_tag": "media_center",
+        "secondary_tags": ["wall_unit", "tv_support", "focal_point"],
+        "spatial_constraints": {
+          "must_be_against_wall": true,
+          "ideal_distance_from_wall": {"min": 0.0, "ideal": 0.1, "max": 0.2},
+          "opposite_from_sofa": true,
+          "centered_on_wall": true,
+          "min_clearance_front": 1.2,
+          "viewing_distance_min": 2.5
+        },
+        "functional_requirements": {
+          "supports_tv": true,
+          "cable_access_needed": true,
+          "outlet_proximity": 1.0,
+          "visible_from_seating": true,
+          "optimal_viewing_angle": {"min": 0, "max": 30}
+        },
+        "zone_preference": {
+          "primary_zone": "media_wall",
+          "distance_from_wall": {"min": 0.0, "ideal": 0.1, "max": 0.2},
+          "corner_compatible": false,
+          "facing_seating_required": true
+        }
+      }
+    },
+    {
+      "id": "nesting_tables_001",
+      "name": "Nesting Tables Set",
+      "type": "nesting_tables",
+      "category": "tables",
+      "dimensions": {"length": 0.6, "width": 0.4, "height": 0.5},
+      "color": "gold_glass",
+      "material": "metal_glass",
+      "style": "modern",
+      "price": 240,
+      "price_tier": "mid",
+      "weight": 12,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "stackable": true,
+        "quantity": 3
+      },
+      "aesthetic_score": 7.8,
+      "popularity": 0.68,
+      "advanced_placement": {
+        "primary_tag": "seating_accessory",
+        "secondary_tags": ["flexible", "space_saving", "multi_unit"],
+        "spatial_constraints": {
+          "beside_seating": true,
+          "ideal_distance_from_seating": {"min": 0.2, "ideal": 0.5, "max": 1.2},
+          "nestable_formation": true,
+          "min_clearance": 0.5
+        },
+        "functional_requirements": {
+          "reachable_from_seat": true,
+          "surface_function": true,
+          "can_be_separated": true
+        },
+        "zone_preference": {
+          "primary_zone": "seating_area",
+          "distance_from_wall": {"min": 0.3, "ideal": 0.8, "max": 999},
+          "corner_compatible": false,
+          "end_of_sofa_ideal": true
+        }
+      }
+    },
+    {
+      "id": "bench_001",
+      "name": "Upholstered Bench",
+      "type": "bench",
+      "category": "seating",
+      "dimensions": {"length": 1.2, "width": 0.4, "height": 0.45},
+      "color": "beige",
+      "material": "fabric_wood",
+      "style": "modern",
+      "price": 390,
+      "price_tier": "mid",
+      "weight": 20,
+      "functional_properties": {
+        "seating_capacity": 2,
+        "pairs_with": ["console_table", "wall"],
+        "storage": false
+      },
+      "aesthetic_score": 7.5,
+      "popularity": 0.58,
+      "advanced_placement": {
+        "primary_tag": "wall_seating",
+        "secondary_tags": ["entryway", "under_window", "linear"],
+        "spatial_constraints": {
+          "against_wall": true,
+          "ideal_distance_from_wall": {"min": 0.0, "ideal": 0.1, "max": 0.3},
+          "parallel_to_wall": true,
+          "under_window_compatible": true,
+          "min_clearance_front": 0.8
+        },
+        "functional_requirements": {
+          "perching_height": true,
+          "can_be_under_console": false,
+          "provides_seating": true
+        },
+        "zone_preference": {
+          "primary_zone": "peripheral",
+          "distance_from_wall": {"min": 0.0, "ideal": 0.1, "max": 0.25},
+          "corner_compatible": false,
+          "window_wall_preferred": true
+        }
+      }
+    },
+    {
+      "id": "decorative_ladder_001",
+      "name": "Decorative Ladder",
+      "type": "decorative_ladder",
+      "category": "decor",
+      "dimensions": {"length": 0.5, "width": 0.15, "height": 1.7},
+      "color": "wood_tone",
+      "material": "wood",
+      "style": "modern",
+      "price": 110,
+      "price_tier": "low",
+      "weight": 6,
+      "functional_properties": {
+        "display": true,
+        "storage": false,
+        "leans_on_wall": true
+      },
+      "aesthetic_score": 7.0,
+      "popularity": 0.55,
+      "advanced_placement": {
+        "primary_tag": "leaning_decor",
+        "secondary_tags": ["corner_accent", "vertical_element", "leans"],
+        "spatial_constraints": {
+          "must_lean_on_wall": true,
+          "ideal_distance_from_wall": {"min": 0.05, "ideal": 0.15, "max": 0.25},
+          "angled_placement": true,
+          "lean_angle": 15,
+          "min_clearance_front": 0.6
+        },
+        "functional_requirements": {
+          "decorative_only": true,
+          "corner_or_wall": true,
+          "vertical_accent": true
+        },
+        "zone_preference": {
+          "primary_zone": "corner",
+          "distance_from_wall": {"min": 0.1, "ideal": 0.15, "max": 0.3},
+          "corner_compatible": true,
+          "corner_preferred": true
+        }
+      }
+    },
+    {
+      "id": "bar_cart_001",
+      "name": "Gold Bar Cart",
+      "type": "bar_cart",
+      "category": "storage",
+      "dimensions": {"length": 0.75, "width": 0.45, "height": 0.85},
+      "color": "gold",
+      "material": "metal_glass",
+      "style": "modern",
+      "price": 295,
+      "price_tier": "mid",
+      "weight": 15,
+      "functional_properties": {
+        "storage": true,
+        "portable": true,
+        "wheels": true
+      },
+      "aesthetic_score": 7.8,
+      "popularity": 0.62,
+      "advanced_placement": {
+        "primary_tag": "corner_storage",
+        "secondary_tags": ["mobile", "entertaining", "accent"],
+        "spatial_constraints": {
+          "prefers_corner": true,
+          "ideal_corner_distance": {"min": 0.3, "ideal": 0.5, "max": 0.9},
+          "against_wall_ok": true,
+          "min_clearance": 0.7
+        },
+        "functional_requirements": {
+          "movable": true,
+          "accessible_for_entertaining": true,
+          "near_seating_area": true,
+          "max_distance_from_seating": 3.0
+        },
+        "zone_preference": {
+          "primary_zone": "corner",
+          "distance_from_wall": {"min": 0.3, "ideal": 0.5, "max": 0.8},
+          "corner_compatible": true,
+          "corner_score": 0.9
+        }
+      }
+    },
+    {
+      "id": "mirror_001",
+      "name": "Round Wall Mirror",
+      "type": "mirror",
+      "category": "decor",
+      "dimensions": {"length": 0.8, "width": 0.05, "height": 0.8},
+      "color": "gold_frame",
+      "material": "glass_metal",
+      "style": "modern",
+      "price": 185,
+      "price_tier": "low",
+      "weight": 8,
+      "functional_properties": {
+        "wall_mounted": true,
+        "reflects_light": true
+      },
+      "aesthetic_score": 8.0,
+      "popularity": 0.77,
+      "advanced_placement": {
+        "primary_tag": "wall_mounted",
+        "secondary_tags": ["reflects_light", "expands_space", "above_furniture"],
+        "spatial_constraints": {
+          "must_be_on_wall": true,
+          "ideal_distance_from_wall": {"min": 0.0, "ideal": 0.0, "max": 0.05},
+          "height_above_floor": 1.6,
+          "above_console_table_ideal": true,
+          "reflects_focal_point": true
+        },
+        "functional_requirements": {
+          "light_reflection": true,
+          "visual_expansion": true,
+          "above_furniture_ok": true
+        },
+        "zone_preference": {
+          "primary_zone": "peripheral",
+          "distance_from_wall": {"min": 0.0, "ideal": 0.0, "max": 0.05},
+          "corner_compatible": false,
+          "opposite_window_bonus": 0.4
+        }
+      }
+    },
+    {
+      "id": "magazine_rack_001",
+      "name": "Metal Magazine Rack",
+      "type": "magazine_rack",
+      "category": "storage",
+      "dimensions": {"length": 0.4, "width": 0.25, "height": 0.45},
+      "color": "black",
+      "material": "metal",
+      "style": "modern",
+      "price": 75,
+      "price_tier": "low",
+      "weight": 3,
+      "functional_properties": {
+        "pairs_with": ["sofa", "armchair"],
+        "storage": true,
+        "portable": true
+      },
+      "aesthetic_score": 6.5,
+      "popularity": 0.52,
+      "advanced_placement": {
+        "primary_tag": "seating_accessory",
+        "secondary_tags": ["storage", "end_of_sofa", "small_footprint"],
+        "spatial_constraints": {
+          "beside_sofa_end": true,
+          "ideal_distance_from_seating": {"min": 0.1, "ideal": 0.3, "max": 0.6},
+          "tucked_beside": true,
+          "min_clearance": 0.4
+        },
+        "functional_requirements": {
+          "reachable_from_seat": true,
+          "small_footprint": true,
+          "against_wall_ok": true
+        },
+        "zone_preference": {
+          "primary_zone": "seating_area",
+          "distance_from_wall": {"min": 0.1, "ideal": 0.3, "max": 1.0},
+          "corner_compatible": false,
+          "sofa_end_position": true
+        }
+      }
+    },
+    {
+      "id": "table_lamp_001",
+      "name": "Modern Table Lamp",
+      "type": "table_lamp",
+      "category": "lighting",
+      "dimensions": {"length": 0.25, "width": 0.25, "height": 0.5},
+      "color": "white_brass",
+      "material": "ceramic_metal",
+      "style": "modern",
+      "price": 145,
+      "price_tier": "low",
+      "weight": 4,
+      "functional_properties": {
+        "pairs_with": ["side_table", "console_table"],
+        "light_type": "task",
+        "adjustable": false
+      },
+      "aesthetic_score": 7.5,
+      "popularity": 0.73,
+      "advanced_placement": {
+        "primary_tag": "requires_surface",
+        "secondary_tags": ["task_lighting", "must_be_on_table", "accent_light"],
+        "spatial_constraints": {
+          "must_be_on_furniture": true,
+          "requires_table_beneath": ["side_table", "console_table", "nesting_tables"],
+          "ideal_table_distance": {"min": 0.0, "ideal": 0.0, "max": 0.0},
+          "centered_on_table": true,
+          "table_stability_required": true
+        },
+        "functional_requirements": {
+          "requires_surface": true,
+          "illuminates_seating": true,
+          "outlet_needed": true,
+          "max_outlet_distance": 1.5,
+          "cannot_float": true
+        },
+        "zone_preference": {
+          "primary_zone": "on_furniture",
+          "distance_from_wall": {"min": 0.0, "ideal": 0.5, "max": 999},
+          "corner_compatible": false,
+          "must_have_table_first": true
+        },
+        "dependency": {
+          "requires_furniture_type": ["side_table", "console_table", "nesting_tables"],
+          "placement_after_dependency": true
+        }
+      }
+    },
+    {
+      "id": "storage_basket_001",
+      "name": "Woven Storage Basket",
+      "type": "storage_basket",
+      "category": "storage",
+      "dimensions": {"length": 0.4, "width": 0.3, "height": 0.35},
+      "color": "natural",
+      "material": "woven",
+      "style": "modern",
+      "price": 55,
+      "price_tier": "low",
+      "weight": 2,
+      "functional_properties": {
+        "storage": true,
+        "portable": true,
+        "stackable": true
+      },
+      "aesthetic_score": 6.8,
+      "popularity": 0.68,
+      "advanced_placement": {
+        "primary_tag": "corner_storage",
+        "secondary_tags": ["flexible", "tucked_away", "low_profile"],
+        "spatial_constraints": {
+          "corner_preferred": true,
+          "ideal_corner_distance": {"min": 0.15, "ideal": 0.3, "max": 0.6},
+          "under_console_ok": true,
+          "beside_furniture_ok": true,
+          "min_clearance": 0.3
+        },
+        "functional_requirements": {
+          "storage_function": true,
+          "accessible": true,
+          "out_of_way": true,
+          "flexible_placement": true
+        },
+        "zone_preference": {
+          "primary_zone": "corner",
+          "distance_from_wall": {"min": 0.15, "ideal": 0.3, "max": 0.5},
+          "corner_compatible": true,
+          "tucked_position": true
+        }
+      }
+    }
+  ]
+}
