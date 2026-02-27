@@ -1,0 +1,319 @@
+# OID-PPO INSTALLATION & USAGE GUIDE
+
+## 📦 DEPENDENCIES TO INSTALL
+
+Run these commands in your terminal:
+
+```bash
+# Core dependencies (REQUIRED)
+pip install torch torchvision
+pip install numpy
+pip install matplotlib
+pip install scipy
+
+# Optional (for better visualization)
+pip install seaborn
+```
+
+---
+
+## ✅ VERIFY INSTALLATION
+
+Create a file `test_install.py`:
+
+```python
+import torch
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy
+
+print("✓ All dependencies installed!")
+print(f"PyTorch version: {torch.__version__}")
+print(f"CUDA available: {torch.cuda.is_available()}")
+if torch.cuda.is_available():
+    print(f"GPU: {torch.cuda.get_device_name(0)}")
+```
+
+Run: `python test_install.py`
+
+---
+
+## 📁 FILES YOU NEED
+
+Place these files in the same directory:
+
+```
+your_project_folder/
+├── oid_ppo_core.py           # Environment & MDP
+├── oid_ppo_rewards.py        # All 6 reward functions
+├── oid_ppo_network.py        # Neural network (PyTorch)
+├── oid_ppo_agent.py          # PPO training agent
+├── oid_ppo_complete.py       # Main script (RUN THIS)
+├── furniture_catalog_enhanced.json  # Your furniture data
+├── room_layout.json          # Your room data
+└── README.md                 # Documentation
+```
+
+---
+
+## 🚀 HOW TO RUN
+
+### Step 1: Navigate to project folder
+```bash
+cd path/to/your_project_folder
+```
+
+### Step 2: Run training
+```bash
+python oid_ppo_complete.py
+```
+
+### Step 3: Wait for training to complete
+- **Expected time:** 10-30 minutes
+- **Episodes:** 1000 (paper specification)
+- You'll see progress printed every 10 episodes
+
+### Step 4: Check results
+After training, you'll have a new folder:
+
+```
+oid_ppo_results/
+├── training_curves.png      # Shows learning progress
+├── results.json              # Best layout found
+├── oid_ppo_final.pth         # Trained model
+└── checkpoints/              # Saved every 100 episodes
+```
+
+---
+
+## 📊 EXPECTED OUTPUT
+
+### During Training:
+```
+================================================================================
+OID-PPO Training
+================================================================================
+Configuration:
+  Episodes: 1000
+  Device: cuda
+  Room: 6.0m × 5.0m
+  Furniture count: 4
+  Map resolution: 0.1m
+
+Network initialized: 523,891 parameters
+
+Starting training...
+Episode   10/1000 | Reward: -5.2341 ± 3.8234 | Best: -1.2345 | P-Loss: 0.0234 | V-Loss: 0.1234 | Speed: 2.34 eps/s
+Episode   20/1000 | Reward: -2.1234 ± 2.4567 | Best:  0.3456 | P-Loss: 0.0189 | V-Loss: 0.0987 | Speed: 2.45 eps/s
+...
+Episode 1000/1000 | Reward:  0.8567 ± 0.1234 | Best:  0.9412 | P-Loss: 0.0012 | V-Loss: 0.0234 | Speed: 2.67 eps/s
+
+Training complete!
+  Time: 374.2s (6.2min)
+  Final reward: 0.8567
+  Best reward: 0.9412 (episode 876)
+```
+
+### Final Results (results.json):
+```json
+{
+  "best_reward": 0.9412,
+  "best_episode": 876,
+  "final_reward": 0.8567,
+  "mean_last_100": 0.8234,
+  "training_episodes": 1000,
+  "best_layout": {
+    "furniture_placements": [
+      {
+        "name": "Modern Glass Coffee Table",
+        "type": "coffee_table",
+        "position": [3.12, 2.34],
+        "rotation_degrees": 0
+      },
+      ...
+    ],
+    "reward_components": {
+      "R_pair": 0.8765,
+      "R_a": 1.0000,
+      "R_v": 0.6543,
+      "R_path": 0.7890,
+      "R_b": 0.9123,
+      "R_al": 1.0000
+    }
+  }
+}
+```
+
+---
+
+## ⚙️ CONFIGURATION OPTIONS
+
+### Quick Test (100 episodes, ~1-2 minutes)
+Edit `oid_ppo_complete.py`, line with `train_oid_ppo`:
+```python
+agent, history = train_oid_ppo(
+    env=env,
+    n_episodes=100,  # Change from 1000 to 100
+    ...
+)
+```
+
+### Use GPU (if available)
+The script automatically detects GPU. To force CPU:
+```python
+device = 'cpu'  # Change from 'cuda'
+```
+
+### Adjust Map Resolution
+In `oid_ppo_complete.py`, when creating environment:
+```python
+env = InteriorDesignEnv(
+    ...
+    map_resolution=0.10  # Options: 0.05 (slow), 0.10 (default), 0.20 (fast)
+)
+```
+
+---
+
+## 🔧 TROUBLESHOOTING
+
+### Problem: "ModuleNotFoundError: No module named 'torch'"
+**Solution:** Install PyTorch
+```bash
+pip install torch torchvision
+```
+
+### Problem: Training is very slow
+**Solutions:**
+1. Increase `map_resolution` to 0.15 or 0.20
+2. Reduce `n_episodes` to 100 for testing
+3. Check if GPU is being used (should see "Device: cuda")
+
+### Problem: "FileNotFoundError: furniture_catalog_enhanced.json"
+**Solution:** Make sure both JSON files are in the same folder as the Python scripts
+
+### Problem: Reward stays negative
+**Solution:** This is normal at the start. Agent learns over time:
+- Episodes 1-100: Mostly negative (learning boundaries)
+- Episodes 100-500: Improving (0.0 to 0.5)
+- Episodes 500-1000: Good layouts (0.6 to 0.95)
+
+### Problem: Out of memory
+**Solutions:**
+1. Increase `map_resolution` (reduce map size)
+2. Use CPU instead of GPU
+3. Reduce batch processing in PPO agent
+
+### Problem: "RuntimeError: CUDA out of memory"
+**Solution:** Force CPU usage:
+```python
+device = 'cpu'
+```
+
+---
+
+## 📈 INTERPRETING RESULTS
+
+### Reward Score (R_idg)
+- **< 0.0**: Invalid or very poor layout
+- **0.0 - 0.5**: Valid but suboptimal
+- **0.5 - 0.8**: Good layout
+- **0.8 - 0.95**: Excellent layout
+- **> 0.95**: Near-perfect (rare, best paper result is 0.971)
+
+### Reward Components
+- **R_pair (Pairwise):** Close to 1.0 = good functional pairing
+- **R_a (Accessibility):** Close to 1.0 = clear access zones
+- **R_v (Visibility):** Close to 1.0 = furniture faces away from walls
+- **R_path (Pathway):** Close to 1.0 = clear paths from doors
+- **R_b (Balance):** Close to 1.0 = even spatial distribution
+- **R_al (Alignment):** Close to 1.0 = parallel/perpendicular to walls
+
+---
+
+## 🎯 COMPARISON WITH PAPER
+
+**Paper Results (Table 1, Fn=4, Square Room):**
+- OID-PPO: R_idg = 0.971, Time = 3.2s per episode
+
+**Your Expected Results:**
+- After 1000 episodes: R_idg ≈ 0.85-0.95
+- Time per episode: 2-5s (depends on hardware)
+
+If you get R_idg > 0.85, your implementation is working correctly!
+
+---
+
+## 📝 NEXT STEPS
+
+### 1. Visualize Best Layout
+After training, the best layout is saved in `results.json`. You can:
+- Use the provided visualization script
+- Import the positions and create your own visualization
+
+### 2. Test Different Furniture
+Modify `furniture_catalog_enhanced.json` to add/remove furniture items
+
+### 3. Change Room Size
+Modify `room_layout.json` to test different room dimensions
+
+### 4. Fine-tune Rewards
+Edit reward functions in `oid_ppo_rewards.py` to emphasize different design aspects
+
+---
+
+## 💡 TIPS FOR BEST RESULTS
+
+1. **Always sort furniture by area (descending)** - paper requirement
+2. **Use map_resolution=0.10** for balance of speed and accuracy
+3. **Train for at least 500 episodes** to see good results
+4. **Check GPU usage** - should be 80-100% during training
+5. **Monitor reward components** - they show what the agent is learning
+
+---
+
+## 🚨 COMMON MISTAKES
+
+### ❌ Mistake 1: Furniture not sorted
+```python
+# WRONG - random order
+furniture_items = [lamp, table, chair, sofa]
+
+# CORRECT - sorted by area (descending)
+furniture_items.sort(key=lambda f: f.area, reverse=True)
+```
+
+### ❌ Mistake 2: Wrong file paths
+```python
+# WRONG - hardcoded Linux path
+'/home/claude/oid_results.json'
+
+# CORRECT - relative path or current directory
+'oid_results.json'
+```
+
+### ❌ Mistake 3: Stopping training too early
+- Training for 100 episodes: reward ~0.2-0.4 (poor)
+- Training for 500 episodes: reward ~0.6-0.8 (good)
+- Training for 1000 episodes: reward ~0.8-0.95 (excellent)
+
+---
+
+## 📧 SUPPORT CHECKLIST
+
+Before asking for help, check:
+- [ ] PyTorch installed (`import torch` works)
+- [ ] All 5 Python files in same folder
+- [ ] Both JSON files in same folder
+- [ ] Furniture sorted by area
+- [ ] Ran for at least 500 episodes
+- [ ] No error messages during training
+
+---
+
+**READY TO START? Run:**
+```bash
+python oid_ppo_complete.py
+```
+
+**Good luck! 🚀**

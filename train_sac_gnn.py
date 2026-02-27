@@ -294,10 +294,10 @@ def main():
     
     # Hyperparameters
     config = {
-        'num_episodes': 3000,
+        'num_episodes': 10000,
         'batch_size': 128,
-        'start_steps': 3000,      # ~125 episodes of random exploration
-        'update_after': 3000,
+        'start_steps': 1000,      # ~125 episodes of random exploration
+        'update_after': 1000,
         'update_every': 10,       # update more frequently (was 50)
         'updates_per_step': 2,    # 2 gradient steps per env step
         'save_every': 200,

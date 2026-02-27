@@ -1,9 +1,9 @@
 {
-  "Average Return": 142.38839826288137,
-  "Return Std": 0.0,
+  "Average Return": 143.68266666666665,
+  "Return Std": 2.842170943040401e-14,
   "Success Rate (%)": 100.0,
   "Average Placements": 4.0,
   "Constraint Violation Rate (%)": 0.0,
   "Collision-Free Rate (%)": 100.0,
-  "Budget Utilization (%)": 31.25
+  "Budget Utilization (%)": 23.00000000000001
 }

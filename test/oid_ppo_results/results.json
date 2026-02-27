@@ -1,0 +1,55 @@
+{
+  "best_reward": 0.7462391726788119,
+  "best_episode": 1748,
+  "final_reward": -10.0,
+  "mean_last_100": -9.060012786759682,
+  "training_episodes": 10000,
+  "best_layout": {
+    "furniture_placements": [
+      {
+        "name": "Modern Glass Coffee Table",
+        "type": "coffee_table",
+        "position": [
+          0.9364206790924072,
+          4.699645042419434
+        ],
+        "rotation_degrees": 0
+      },
+      {
+        "name": "Woven Storage Basket",
+        "type": "storage_basket",
+        "position": [
+          0.2004948854446411,
+          0.934910774230957
+        ],
+        "rotation_degrees": 0
+      },
+      {
+        "name": "Metal Magazine Rack",
+        "type": "magazine_rack",
+        "position": [
+          0.12798663973808289,
+          4.685506343841553
+        ],
+        "rotation_degrees": 270
+      },
+      {
+        "name": "Modern Table Lamp",
+        "type": "table_lamp",
+        "position": [
+          0.451473206281662,
+          1.476165771484375
+        ],
+        "rotation_degrees": 0
+      }
+    ],
+    "reward_components": {
+      "R_pair": 0.46031958793607275,
+      "R_a": 1.0,
+      "R_v": 0.5,
+      "R_path": 0.9436721554343166,
+      "R_b": 0.9182724166270926,
+      "R_al": 0.6551708760753895
+    }
+  }
+}
