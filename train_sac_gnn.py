@@ -6,6 +6,8 @@ Main training loop that combines graph-based spatial reasoning with RL
 
 import torch
 import numpy as np
+torch.set_num_threads(12)         # leave 4 cores free for OS + env stepping
+torch.set_num_interop_threads(4)
 import matplotlib.pyplot as plt
 from typing import Dict, List
 import json
@@ -294,7 +296,7 @@ def main():
     
     # Hyperparameters
     config = {
-        'num_episodes': 10000,
+        'num_episodes': 2000,
         'batch_size': 128,
         'start_steps': 1000,      # ~125 episodes of random exploration
         'update_after': 1000,
@@ -320,7 +322,8 @@ def main():
     }
     
     # Device
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    #device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    device = 'cpu' 
     print(f"Using device: {device}")
     
     # Create environment

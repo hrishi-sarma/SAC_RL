@@ -1,5 +1,5 @@
 {
-  "num_episodes": 10000,
+  "num_episodes": 2000,
   "batch_size": 128,
   "start_steps": 1000,
   "update_after": 1000,
